@@ -11,7 +11,7 @@
     grid-template-areas:    
     "hd hd"
     "mn mn"
-    "rp bio"
+    "main bio"
     "main bio"
     "main pd"
     "main pd"
@@ -20,24 +20,6 @@
     width: 100vw;
     min-height: 100vh;
     }
-
-
-/* RECENT POSTS - header */
-.recent {
-    grid-area: rp;
-    align-content: center;
-}
-
-.recent > h2 {
-    grid-area: 3/1/4/6;
-    font-size: 30pt;
-    text-align: center;
-    color: white;
-    letter-spacing: 2px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-}
 
 
 /* MAIN CONTENT - Recent post list */
@@ -78,10 +60,10 @@
 /* BLOGGER BIO - aside */
 .bio {
     grid-area: bio;
-    padding: 20px;
-    text-align: center;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    text-align: center;
 }
 
 
@@ -180,11 +162,6 @@ footer {
     .menu button {
         margin: 0;
         padding: 0;
-    }
-
-
-    .recent > h2 {
-        justify-content: center;
     }
 
 
