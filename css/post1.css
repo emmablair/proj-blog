@@ -5,12 +5,11 @@
 /* GRID - main */
 .container {
     display: grid;
-    grid-template-rows: 15% 5% 5% 20% 20% 15% 15% 5%;
+    grid-template-rows: auto;
     grid-template-columns: 80% 20%;
     grid-template-areas:    
     "hd hd"
     "mn mn"
-    "main bio"
     "main bio"
     "main pd"
     "main pd"
