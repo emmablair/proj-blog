@@ -1,0 +1,429 @@
+@import url(background-type.css);
+@import url(banner-menu.css);
+
+
+/* GRID - main */
+.container {
+    display: grid;
+    grid-template-rows: 15% 5% 5% 30% 15% 15% 20% 5%;
+    grid-template-columns: 80% 20%;
+    grid-template-areas:    
+    "hd hd"
+    "mn mn"
+    "main bio"
+    "main bio"
+    "main pd"
+    "main pd"
+    "main pd"
+    "ft pd";
+    width: 100vw;
+    min-height: 100vh;
+    }
+
+
+/* MAIN CONTENT - Recent post list */
+.content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5r 1fr;
+    justify-content: center;
+    padding: 20vw;
+    padding-top: 5vw;
+    padding-bottom: 0;
+}
+
+
+article {
+    margin: auto
+}
+
+
+.content h1 {
+    font-size: 5.5vw;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+
+.content p {
+    color: white;
+}
+
+
+.content h3 {
+    color: rgb(255, 229, 82);
+}
+
+
+#head-img {
+    align-self: center;
+    text-align: center;
+}
+
+
+#post-img {
+    /* article image */
+    max-width: 60vw;
+    height: auto;
+    border-radius: .5vw;
+}
+
+
+/* BLOGGER BIO - aside */
+.bio {
+    grid-area: bio;
+    padding: 20px;
+    text-align: center;    
+}
+
+
+.bio > p {
+    text-align: left;
+}
+
+
+.bio h2 {
+    font-size: 20pt;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+}
+
+
+#profile-pic {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.box-pic {
+    height: 15vw;
+    width: 15vw;
+    margin: auto;
+}
+
+
+/* DONUT TRACKER - aside */
+.donut-count {
+    grid-area: dn;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+}
+
+
+.donut-count p {
+    color: white;
+    font-size: 20pt;
+    text-align: center;
+} 
+
+
+.donut-count h2 {
+    font-size: 20pt;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+.donut-count h3 {
+    text-align: center;
+}
+
+
+.donut-count div {
+    padding: 10pt;
+}
+
+/* POSTS BY DATE - aside */
+.archive {
+    grid-area: pd;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.archive h2 {
+    font-size: 20pt;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    grid-area: ft;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.social {
+    margin-bottom: 30px;
+}
+
+
+.social img {
+    height: 40px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "hd"
+            "mn"
+            "rp"
+            "main"
+            "main"
+            "dn"
+            "bio"
+            "pd"
+            "ft";
+        margin: 5px;
+    }
+
+
+    .content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-auto-flow: row;
+
+    }
+
+
+    .banner > h1 {
+        font-size: 45pt;
+    }
+
+
+    .menu button {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .recent > h2 {
+        justify-content: center;
+    }
+
+
+    .bio {
+        display: grid;
+        grid-template-rows: 20% 20% 60%;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+    }
+
+
+    .bio > h2 {
+        grid-area: 1/1/1/6;
+        font-size: 40pt;
+    }
+
+
+    .bio > h3 {
+        grid-area: 2/1/3/6;
+        font-size: 20pt;
+        margin-top: 30px;
+        margin-bottom: 0;
+        padding: 10px;
+    }
+
+    .bio > p {
+        grid-area: 3/3/4/6;
+        margin-top: 0;
+        align-self: center;
+        justify-self: center;
+    }
+
+
+    .box-pic {
+        grid-area: 3/1/4/3;
+        justify-self: center;
+        height: 200px;
+        width: 200px;
+        align-self: center;
+    }
+
+
+    .box-pic {
+        height: 200px;
+        width: 200px;
+        display: block;
+        align-items: left;
+        margin: 0;
+        margin-bottom: 30px
+       
+    }
+
+
+    .donut-count {
+        display: grid;
+        grid-template-rows: 30% 20% 50%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+            "tr tr tr tr tr tr"
+            ". . . . . ."
+            "et et vis vis fut fut";
+    }
+
+
+    .donut-count p {
+        font-size: 15pt;
+    }
+
+
+    .track {
+        grid-area: tr;
+        justify-self: center;
+    }
+
+    .track h2 {
+        font-size: 40pt;
+    }
+
+    .eaten {
+        grid-area: et;
+        justify-self: center;
+        align-self: baseline;
+    }
+
+
+    .visit {
+        grid-area: vis;
+        justify-self: center;
+        align-self: baseline;
+    }
+
+
+    .future {
+        grid-area: fut;
+        justify-self: center;
+        align-self: baseline;
+    }
+}
+
+
+@media (max-width:600px) {
+    .container {
+        grid-template-areas: 
+            "hd"
+            "mn"
+            "main"
+            "main"
+            "dn"
+            "bio"
+            "pd"
+            "ft";
+    }
+
+
+    .content {
+        gap: 40px
+    }
+
+
+    .banner > h1 {
+        font-size: 30pt;
+        margin-top: 20px;
+    }
+
+
+    .banner > h2 {
+        font-size: 20pt;
+        margin-bottom: 20px;;
+    }
+
+
+    .menu button {
+        font-size: 15pt;
+    }
+
+
+    .bio {
+        grid-template-rows: 30% 20% 50%;
+    }
+
+
+    .bio > h2 {
+        font-size: 25pt;
+        margin: 0;
+        align-self: center;
+    }
+
+    .bio > h3 {
+        font-size: 17pt;
+        margin: 0;
+        padding: 5px;
+        align-self: center;
+    }
+
+    .bio > p {
+        grid-area: 3/1/4/6;
+        font-size: 10pt;
+        text-align: center;
+        padding: 10px;
+        margin: 0;        
+    }
+
+
+    .box-pic {
+        display: none;
+    }
+
+
+    .donut-count {
+        grid-template-rows: 35% 65%;
+        grid-template-areas: 
+            "tr tr tr tr tr tr"
+            "et et vis vis fut fut";
+    }
+
+
+    .donut-count h3 {
+        font-size: 18pt;
+    }
+
+
+    .donut-count p {
+        font-size: 17pt;
+    }
+
+
+    .donut-count div {
+        padding: 5pt;
+    }
+
+
+    .track h2 {
+        font-size: 30pt;
+    }
+
+
+    .archive h2 {
+        margin-top: 0;
+    }
+}
+
+
+
+@media (max-width:400px) {
+    .content {
+        padding: 25px;
+        gap: 30px;
+    }
+}

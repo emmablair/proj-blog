@@ -1,0 +1,15 @@
+a:hover {
+    font-size: 0;
+}
+
+
+a:hover:after {
+    content: attr(hover-data);
+    font-size: 12pt;
+    text-decoration-color: blueviolet;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}

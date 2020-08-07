@@ -1,0 +1,59 @@
+/* BLOG TITLE/HEADER */
+.banner {
+    grid-area: hd;
+}
+
+
+.banner > h1 {
+    color: rgb(255, 229, 82);
+    text-align: center;
+    font-size: 90px;
+    margin-top: 40pt;
+    margin-bottom: 10px;
+}
+
+
+.banner > h2 {
+    color: pink;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 25pt;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 40pt;
+}
+
+
+/* MENU BUTTONS */
+.menu {
+    grid-area: mn;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    background-color: rgb(255, 229, 82);
+    padding: 10px;
+    align-content: center;
+}
+
+
+.menu button {
+    color: rgb(255, 138, 157);
+    font-size: 20pt;   
+    background-color: rgb(255, 229, 82);
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px 10px;
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.menu a {
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    color: rgb(255, 138, 157);
+}
