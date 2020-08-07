@@ -6,17 +6,17 @@
 /* GRID - main */
 .container {
     display: grid;
-    grid-template-rows: 15% 5% 5% 30% 15% 15% 20% 5%;
+    grid-template-rows: 15% 5% 5% 20% 20% 15% 15% 5%;
     grid-template-columns: 80% 20%;
     grid-template-areas:    
     "hd hd"
     "mn mn"
     "rp bio"
     "main bio"
-    "main dn"
-    "main dn"
     "main pd"
-    "ft pd";
+    "main pd"
+    "main ."
+    "ft .";
     width: 100vw;
     min-height: 100vh;
     }
@@ -80,6 +80,8 @@
     grid-area: bio;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -106,43 +108,6 @@
     height: 15vw;
     width: 15vw;
     margin: auto;
-}
-
-
-/* DONUT TRACKER - aside */
-.donut-count {
-    grid-area: dn;
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-around;
-    justify-content: center;
-    align-content: center;
-    padding: 10px;
-}
-
-
-.donut-count p {
-    color: white;
-    font-size: 20pt;
-    text-align: center;
-} 
-
-
-.donut-count h2 {
-    font-size: 20pt;
-    color: rgb(255, 255, 255);
-    letter-spacing: 2px;
-    text-align: center;
-}
-
-
-.donut-count h3 {
-    text-align: center;
-}
-
-
-.donut-count div {
-    padding: 10pt;
 }
 
 
@@ -181,7 +146,6 @@ footer {
 
 
 /* MEDIA QUERIES */
-
 @media (max-width:900px) {
     .container {
         display: grid;
@@ -258,52 +222,6 @@ footer {
         margin-top: 0;
         align-self: center
     }
-
-
-    .donut-count {
-        display: grid;
-        grid-template-rows: 30% 20% 50%;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: 
-            "tr tr tr tr tr tr"
-            ". . . . . ."
-            "et et vis vis fut fut";
-    }
-
-
-    .donut-count p {
-        font-size: 15pt;
-    }
-
-
-    .track {
-        grid-area: tr;
-        justify-self: center;
-    }
-
-    .track h2 {
-        font-size: 40pt;
-    }
-
-    .eaten {
-        grid-area: et;
-        justify-self: center;
-        align-self: baseline;
-    }
-
-
-    .visit {
-        grid-area: vis;
-        justify-self: center;
-        align-self: baseline;
-    }
-
-
-    .future {
-        grid-area: fut;
-        justify-self: center;
-        align-self: baseline;
-    }
 }
 
 
@@ -313,7 +231,6 @@ footer {
             "hd"
             "mn"
             "main"
-            "dn"
             "bio"
             "pd"
             "ft";
@@ -375,39 +292,10 @@ footer {
     }
 
 
-    .donut-count {
-        grid-template-rows: 35% 65%;
-        grid-template-areas: 
-            "tr tr tr tr tr tr"
-            "et et vis vis fut fut";
-    }
-
-
-    .donut-count h3 {
-        font-size: 18pt;
-    }
-
-
-    .donut-count p {
-        font-size: 17pt;
-    }
-
-
-    .donut-count div {
-        padding: 5pt;
-    }
-
-
-    .track h2 {
-        font-size: 30pt;
-    }
-
-
     .archive h2 {
         margin-top: 0;
     }
 }
-
 
 
 @media (max-width:400px) {
