@@ -42,3 +42,22 @@ p {
 a {
     font-family: 'Poppins', sans-serif;
 }
+
+
+blockquote {
+    color: rgb(255, 229, 82);
+    font-size: 12pt;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+figcaption {
+    color: rgb(70, 70, 70);
+    font-size: 12pt;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+strong {
+    color: rgb(255, 229, 82);
+}

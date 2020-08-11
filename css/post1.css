@@ -94,6 +94,11 @@ article {
 }
 
 
+.bio strong {
+    color: black;
+}
+
+
 #profile-pic {
     display: inline-block;
     width: 100%;
